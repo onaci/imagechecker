@@ -25,7 +25,7 @@ def getInfo(image, cmd):
         #print "Return code: ", p.returncode
         #print out.rstrip()
         #print err.rstrip()
-        reg_cache[image][cmd] = out.rstrip().split("\n")
+        reg_cache[image][cmd] = out.decode().rstrip().split("\n")
     return reg_cache[image][cmd]
 
 def check_images():
